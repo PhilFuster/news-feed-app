@@ -1,0 +1,22 @@
+[
+  {
+    "title": "News Feed Artile 1",
+    "body": "This is the body of the article",
+    "id": 1
+  },
+  {
+    "title": "News Feed Artile 2",
+    "body": "This is the body of the 2nd article",
+    "id": 2
+  },
+  {
+    "title": "News Feed Artile 3",
+    "body": "This is the body of the 3rd article",
+    "id": 3
+  },
+  {
+    "title": "News Feed Artile 4",
+    "body": "This is the body of the 4th article",
+    "id": 4
+  }
+]

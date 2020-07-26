@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useCallback } from 'react';
+import WordCount from './components/WordCount';
 import './App.css';
+import { useAnyKeyToRender } from './hooks/useAnyKeyToRender';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  useAnyKeyToRender();
+  const fn = useCallback(() => {
+    console.log('hello');
+    console.log('world');
+  }, []);
 
+  useEffect(() => {
+    console.log('fresh render');
+    fn();
+  }, [fn]);
+  return <WordCount>You are not going to believe this but..</WordCount>;
+}
 export default App;

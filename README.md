@@ -1,6 +1,24 @@
 # news feed application
 
-## A simple news feed app using react. Highlighting the use of useEffect hook.
+A simple news feed app using react. Highlighting the use of hooks like useEffect, useMemo, and useCallback.
+
+This example project focuses on useEffect, useMemo, and useCallback.
+Along with those hooks, it focuses on the idea of a dependency array which is a tool that helps determine  
+when a React component should re-render. Without a dependency array useEffect will be triggered by any change in state and reRender
+the component. The use of a dependency array says, when this property changes, reRender
+the component and call this useEffect function. Basically links a useEffect to a specific state property.
+
+useEffect works great when working with primitive values in state. What happens when state is represented by an array?  
+Or an object? Deep dependency checking gets a little more complex at that time.  
+Two arrays: [1, 2, 3] and [1, 2, 3], are different. Although their values are the same, they are two different instances  
+of an array object. When using the aforementioned array instance as a dependencyArray for a useEffect hook, will cause the hook  
+to always be called because on reRender the array instance is re-created. React will think it changed even though its values  
+are still the same.
+
+This is where useMemo comes into play. useMemo will cache the dependency passed to it. It will then check against that  
+dependency when deciding whether to re-render or not. Since it is cached, the same values will not cause a re render.
+
+useCallback is similar, except it memoizes function value for fn.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
