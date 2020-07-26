@@ -1,3 +1,7 @@
+# news feed application
+
+## A simple news feed app using react. Highlighting the use of useEffect hook.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
